@@ -7,7 +7,9 @@ if /I "%comp%"=="n" goto no
 echo Invalid choice. Exiting.
 exit
 :yes
-compact /c c:\windows\*.* /s /i /exe:lzx
+compact /c /s:C:\ /a /i /Q /s /i /exe:lzx
+compact /compactos:always
+powercfg.exe /hibernate off
 exit
 :no
 echo You chose not to compress the OS.
